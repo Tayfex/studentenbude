@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Studentenbude - Futtern wie bei Muttern</title>
+	
+	<!-- meta tags here -->
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="content-language" content="de-de" >
+  
+    <!-- style sheets -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/w3.css">
+	<link rel="stylesheet" type="text/css" href="css/sso-style.css">
+	<link rel="stylesheet" type="text/css" href="css/sso-font.css">
+	<link rel="stylesheet" type="text/css" href="css/sso-color.css">
+	<link rel="stylesheet" type="text/css" href="css/sso-frost.css">
+	<link rel="stylesheet" type="text/css" href="css/sso-sidenav.css">
+	
+	<!-- import javascript functions -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	
+  </head>
+  
+  <body>
+  
+    <!-- Navigation and  Logo -->
+	<div class="w3-sidebar w3-bar-block w3-card w3-animate-right sso-navi-bg-color sso-sidenav-style" id="sidebar-navi">
+	  <button onclick="sidebar_close()" class="w3-bar-item w3-button w3-large">Schlie&szlig;en &times;</button>
+	  <a href="#" onclick="document.getElementById('menu').style.display='block'; sidebar_close()" class="w3-bar-item w3-button"><i class="fa fa-map-o"></i> Karte</a>
+	  <a href="#" onclick="document.getElementById('contact').style.display='block'; sidebar_close()" class="w3-bar-item w3-button"><i class="fa fa-envelope-o"></i> Kontakt</a>
+	</div>
+	
+	<div class="w3-top w3-card-4 sso-navi-bg-color sso-footer-style">
+	  <div class="w3-small w3-left">
+	    <i class="fa fa-facebook-official fa-fw sso-social-size"></i>
+		<i class="fa fa-instagram fa-fw sso-social-size"></i>
+	  </div>
+	  
+	  <div class="w3-right w3-hide-large w3-hide-medium">
+	    <a href="#" onclick="sidebar_open()"><i class="fa fa-bars fa-fw sso-bars-size"></i></a>
+	  </div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<!-- HEADER with animated images -->
+	<header class="w3-display-container sso-bg-image-start" id="home">
+	
+	  <button class="w3-display-bottommiddle w3-button w3-border w3-round sso-reservieren-btn w3-hide-large w3-hide-medium" onclick="document.getElementById('reservation').style.display='block'">
+		<i class="fa fa-cutlery"></i> RESERVIEREN
+	  </button>
+	  
+	  <center>
+	    <img src="images/logo2.png" class="sso-logo">
+	  </center>
+	
+	  
+	  <div class="w3-display-bottomleft sso-frost-background sso-frost-foreground w3-hide-small sso-opening-container">
+	    <div class="w3-container" align="left">
+		  <h4>&Ouml;ffnungszeiten:</h4>
+		  <p>Dienstag - Donnerstag | <strong>10 - 22</strong><br>
+		  Freitag u. Samstag | <strong>10 - 24</strong><br>
+		  Sonntag | <strong>8 - 16</strong><br>
+		  Montags <strong>Ruhetag</strong></p>
+		</div>
+	  </div>
+	</header>
+	
+	
+	
+	
+	<div class="sso-sticky-sidenav-icon w3-hide-small" id="my-menu">
+	  <a href="#" onclick="document.getElementById('menu').style.display='block'">
+	    <div>
+	      <p>Karte</p>
+		  <i class="fa fa-map-o"></i>
+	    </div>
+	  </a>
+	  
+	  <a href="#" onclick="document.getElementById('contact').style.display='block'">
+	    <div>
+	      <p>Kontakt</p>
+	      <i class="fa fa-envelope-o"></i>
+	    </div>
+	  </a>
+	  
+	  <a href="#" onclick="document.getElementById('reservation').style.display='block'">
+	    <div id="rese">
+		  <p>Reservieren</p>
+	      <i class="fa fa-cutlery"></i>
+	    </div>
+	  </a>
+	</div>
+	
+	
+	
+	
+	
+	
+	<footer class="w3-bottom w3-center sso-footer-color sso-footer-style">
+	  <div class="w3-container w3-small w3-left">
+	    &copy; <script>var d = new Date(); var n = d.getFullYear(); document.write(n);</script> Studentenbude
+	  </div>
+	  <div class="w3-container w3-small w3-right">
+	    <a href="#">Datenschutz</a> | <a href="#">Impressum</a>
+	  </div>
+	</footer>
+	
+	
+	
+	
+	
+	
+	<div id="reservation" class="w3-modal">
+	  <div class="w3-modal-content">
+	    <header class="w3-container sso-modal-header-color">
+		  <span onclick="document.getElementById('reservation').style.display='none'" class="w3-button w3-display-topright">X</span>
+		  <h3>Reservieren</h3>
+		</header>
+		
+	    <div class="w3-padding-16 w3-container sso-modal-body-color">
+		  <div class="intro-slides">
+		    <p class="w3-border-bottom"><strong>Auswahl</strong> <span class="w3-small"> > Pl&auml;tze w&auml;hlen > Kontaktdaten eingeben > Men&uuml; ausw&auml;hlen > Daten &uuml;berpr&uuml;fen </span></p>
+		
+		    <div style="font-size: 18px;">
+		      <form action="javascript:void(0);" method="POST" onsubmit="validateForm1()" id="form1">
+			    <div class="w3-row sso-padding-8">
+				  <div class="w3-third">
+				    <label for="my-date"><strong>Datum:</strong></label>
+				  </div>
+				  
+				  <div class="w3-twothird">
+				    <input id="my-date" class="w3-input w3-border w3-round sso-input-width" type="date" name="my-date" required>
+				  </div>
+				</div>
+				
+			    <div class="w3-row sso-padding-8">
+				  <div class="w3-third">
+				    <label for="my-time"><strong>Uhrzeit:</strong></label>
+				  </div>
+				  
+				  <div class="w3-twothird">
+				    <input id="my-time" class="w3-input w3-border w3-round sso-input-width" type="time" name="my-time" min="13:00" max="21:00" required>
+				  </div>
+				</div>
+				
+			    <div class="w3-row sso-padding-8">
+				  <div class="w3-third">
+				    <label for="my-persons"><strong>Anzahl Personen:</strong></label>
+				  </div>
+				  
+				  <div class="w3-twothird">
+				    <input id="my-persons" class="w3-input w3-border w3-round sso-input-width" type="number" name="my-persons" min="1" max="6" value="2" required>
+				  </div>
+				</div>
+			
+			    <p>
+				  <button class="w3-button w3-border w3-round sso-submit-color w3-right" type="submit">
+				    <font style="font-size: 16px">Weiter <i class="fa fa-chevron-right fa-fw"></i></font>
+				  </button>
+			    </p>
+			  </form>
+		    </div>
+		  </div>
+		  
+		  
+		  <div class="intro-slides">
+		    <p class="w3-border-bottom"><span class="w3-small">Auswahl ></span> <strong>Pl&auml;tze w&auml;hlen</strong> <span class="w3-small">> Kontaktdaten eingeben > Men&uuml; ausw&auml;hlen > Daten &uuml;berpr&uuml;fen </span></p>
+		
+		    <div style="font-size: 18px;">
+		      <h3>Tisch ausw&auml;hlen</h3>
+			  
+			    <div class="w3-row">
+				  <div class="w3-half">
+				    <p><div class="sso-inside-style"></div> Innen</p>
+				    <p><div class="sso-outside-style"></div> Terasse</p>
+				  </div>
+				  
+				  <div class="w3-half">
+				    <p><div class="sso-seat-free-style sso-seat-free"></div> Frei</p>
+				    <p><div class="sso-seat-used-style sso-seat-used"></div> Belegt</p>
+				  </div>
+				</div>
+				
+			  <p>Ihr ausgew&auml;hlter Tisch: <strong><span id="current-table"></span></strong></p>
+			  
+			  <div class="w3-padding-16">
+			    <!-- seat map based on grids -->
+				<div class="sso-seatmap-grid-main">
+					<!-- row 1 -->
+					<div>&nbsp;</div>
+					<div class="sso-seatmap-table sso-seat-free" id="table-1-inside" onclick="selectTable(this.id)">2</div>
+					<div class="sso-seatmap-table sso-seat-free" id="table-2-inside" onclick="selectTable(this.id)">2</div>  
+					<div class="sso-seatmap-table sso-seat-free" id="table-3-inside" onclick="selectTable(this.id)">2</div>
+					<div class="sso-seatmap-table sso-seat-free" id="table-4-inside" onclick="selectTable(this.id)">2</div>
+					<div>&nbsp;</div>  
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>  
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div class="sso-seatmap-bar sso-seat-free" id="table-7-bar" onclick="selectTable(this.id)">1</div>  
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					
+					<!-- row 2 -->
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>  
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>  
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div class="sso-seatmap-bar sso-seat-free" id="table-1-bar" onclick="selectTable(this.id)">1</div>
+					<div class="sso-seatmap-bar sso-seat-used" id="table-2-bar" onclick="alert('Dieser Tisch ist bereits belegt!')">1</div>
+					<div class="sso-seatmap-bar sso-seat-free" id="table-3-bar" onclick="selectTable(this.id)">1</div>  
+					<div class="sso-seatmap-bar sso-seat-free" id="table-4-bar" onclick="selectTable(this.id)">1</div>
+					<div class="sso-seatmap-bar sso-seat-used" id="table-5-bar" onclick="alert('Dieser Tisch ist bereits belegt!')">1</div>
+					<div class="sso-seatmap-bar sso-seat-free" id="table-6-bar" onclick="selectTable(this.id)">1</div>  
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					
+					<!-- row 3 -->
+					<div class="sso-seatmap-table sso-seat-free" id="table-5-inside" onclick="selectTable(this.id)">2</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>  
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>  
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>  
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>  
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					
+					<!-- row 4 -->
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div class="sso-seatmap-table sso-seat-free" id="table-7-inside" onclick="selectTable(this.id)">4</div>  
+					<div>&nbsp;</div>
+					<div class="sso-seatmap-table sso-seat-free" id="table-8-inside" onclick="selectTable(this.id)">4</div>
+					<div class="sso-seatmap-table sso-seat-free" id="table-9-inside" onclick="selectTable(this.id)">4</div>  
+					<div>&nbsp;</div>
+					<div class="sso-seatmap-table sso-seat-free" id="table-10-inside" onclick="selectTable(this.id)">4</div>
+					<div>&nbsp;</div>
+					<div class="sso-seatmap-table sso-seat-free" id="table-11-inside" onclick="selectTable(this.id)">6</div>
+					
+					<!-- row 5 --->
+					<div class="sso-seatmap-table sso-seat-used" id="table-6-inside" onclick="alert('Dieser Tisch ist bereits belegt!')">2</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>  
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>  
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>  
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>  
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					
+					<!-- row 6 -->
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div class="sso-seatmap-table sso-seat-used" id="table-13-inside" onclick="alert('Dieser Tisch ist bereits belegt!')">4</div>  
+					<div>&nbsp;</div>
+					<div class="sso-seatmap-table sso-seat-used" id="table-14-inside" onclick="alert('Dieser Tisch ist bereits belegt!')">4</div>
+					<div class="sso-seatmap-table sso-seat-used" id="table-15-inside" onclick="alert('Dieser Tisch ist bereits belegt!')">4</div>  
+					<div>&nbsp;</div>
+					<div class="sso-seatmap-table sso-seat-free" id="table-16-inside" onclick="selectTable(this.id)">4</div>
+					<div>&nbsp;</div>
+					<div class="sso-seatmap-table sso-seat-used" id="table-17-inside" onclick="alert('Dieser Tisch ist bereits belegt!')">6</div>
+					
+					<!-- row 7 -->
+					<div class="sso-seatmap-table sso-seat-free" id="table-12-inside" onclick="selectTable(this.id)">2</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>  
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>  
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>  
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>  
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					
+					<!-- row 8 -->
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div class="sso-seatmap-table sso-seat-free" id="table-18-inside" onclick="selectTable(this.id)">2</div>  
+					<div>&nbsp;</div>
+					<div class="sso-seatmap-table sso-seat-used" id="table-19-inside" onclick="alert('Dieser Tisch ist bereits belegt!')">2</div>
+					<div>&nbsp;</div>  
+					<div class="sso-seatmap-table sso-seat-free" id="table-20-inside" onclick="selectTable(this.id)">2</div>
+					<div>&nbsp;</div>
+					<div class="sso-seatmap-table sso-seat-free" id="table-21-inside" onclick="selectTable(this.id)">2</div>
+					<div>&nbsp;</div>
+					<div class="sso-seatmap-table sso-seat-used" id="table-22-inside" onclick="alert('Dieser Tisch ist bereits belegt!')">2</div>  
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div class="sso-seatmap-table sso-seat-used" id="table-23-inside" onclick="alert('Dieser Tisch ist bereits belegt!')">4</div>  
+					<div>&nbsp;</div>
+				  </div>
+					
+				  <!-- outside -->
+				  <div class="sso-seatmap-grid-main-outside">
+					<!-- row 1 -->
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>  
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>  
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>  
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>  
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					
+					<!-- row 2 -->
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>  
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div class="sso-seatmap-table sso-seat-free" id="table-3-outside" onclick="selectTable(this.id)">4</div>  
+					<div>&nbsp;</div>
+					<div class="sso-seatmap-table sso-seat-free" id="table-4-outside" onclick="selectTable(this.id)">4</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>  
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div class="sso-seatmap-table sso-seat-used" id="table-6-outside" onclick="alert('Dieser Tisch ist bereits belegt!')">4</div>  
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					
+					<!-- row 3 -->
+					<div class="sso-seatmap-table sso-seat-free" id="table-1-outside" onclick="selectTable(this.id)">2</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>  
+					<div class="sso-seatmap-table sso-seat-used" id="table-2-outside" onclick="alert('Dieser Tisch ist bereits belegt!')">2</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>  
+					<div>&nbsp;</div>
+					<div class="sso-seatmap-table sso-seat-free" id="table-5-outside" onclick="selectTable(this.id)">2</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>  
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					
+					<!-- row 4 -->
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>  
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div class="sso-seatmap-table sso-seat-free" id="table-9-outside" onclick="selectTable(this.id)">4</div>  
+					<div>&nbsp;</div>
+					<div class="sso-seatmap-table sso-seat-used" id="table-10-outside" onclick="alert('Dieser Tisch ist bereits belegt!')">4</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>  
+					<div>&nbsp;</div>
+					<div class="sso-seatmap-table sso-seat-free" id="table-12-outside" onclick="selectTable(this.id)">4</div>
+					
+					<!-- row 5 -->
+					<div class="sso-seatmap-table sso-seat-used" id="table-7-outside" onclick="alert('Dieser Tisch ist bereits belegt!')">2</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>  
+					<div class="sso-seatmap-table sso-seat-used" id="table-8-outside" onclick="alert('Dieser Tisch ist bereits belegt!')">2</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>  
+					<div>&nbsp;</div>
+					<div class="sso-seatmap-table sso-seat-used" id="table-11-outside" onclick="alert('Dieser Tisch ist bereits belegt!')">2</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>  
+					<div>&nbsp;</div>
+				</div>
+			  </div>
+			  
+			  <button class="w3-button w3-border w3-round sso-submit-color w3-left" onclick="removeTable();">
+				<font style="font-size: 16px"><i class="fa fa-chevron-left fa-fw"></i> Zur&uuml;ck</font>
+			  </button>
+			  
+			  <button class="w3-button w3-border w3-round sso-submit-color w3-right" onclick="validateTable();">
+				<font style="font-size: 16px">Weiter <i class="fa fa-chevron-right fa-fw"></i></font>
+			  </button>
+		    </div>
+		  </div>
+		  
+		  
+		  <div class="intro-slides">
+		    <p class="w3-border-bottom"><span class="w3-small">Auswahl > Pl&auml;tze w&auml;hlen ></span> <strong>Kontaktdaten eingeben</strong> <span class="w3-small">> Men&uuml; ausw&auml;hlen > Daten &uuml;berpr&uuml;fen </span></p>
+		
+		    <div style="font-size: 18px;">
+		      <form action="javascript:void(0);" method="POST" onsubmit="validateContact()" id="form-contact-data">
+			    <div class="w3-row sso-padding-8">
+				  <div class="w3-third">
+				    <label for="my-name"><strong>Nachname:</strong></label>
+				  </div>
+				  
+				  <div class="w3-twothird">
+				    <input id="my-name" class="w3-input w3-border w3-round sso-input-width" type="text" name="my-name" required>
+				  </div>
+				</div>
+				
+				<div class="w3-row sso-padding-8">
+				  <div class="w3-third">
+				    <label for="my-first-name"><strong>Vorname:</strong></label>
+				  </div>
+				  
+				  <div class="w3-twothird">
+				    <input id="my-first-name" class="w3-input w3-border w3-round sso-input-width" type="text" name="my-first-name">
+				  </div>
+				</div>
+				
+			    <div class="w3-row sso-padding-8">
+				  <div class="w3-third">
+				    <label for="my-phone"><strong>Telefonnummer:</strong></label>
+				  </div>
+				  
+				  <div class="w3-twothird">
+				    <input id="my-phone" class="w3-input w3-border w3-round sso-input-width" type="phone" name="my-phone" required>
+				  </div>
+				</div>
+				
+			    <div class="w3-row sso-padding-8">
+				  <div class="w3-third">
+				    <label for="my-mail"><strong>E-Mail:</strong></label>
+				  </div>
+				  
+				  <div class="w3-twothird">
+				    <input id="my-mail" class="w3-input w3-border w3-round sso-input-width" type="mail" name="my-mail" required>
+				  </div>
+				</div>
+			
+			    <p>				
+				  <button class="w3-button w3-border w3-round sso-submit-color w3-right" type="submit">
+				    <font style="font-size: 16px">Weiter <i class="fa fa-chevron-right fa-fw"></i></font>
+				  </button>
+			    </p>
+			  </form>
+			  
+			  <button class="w3-button w3-border w3-round sso-submit-color w3-left" onclick="plusDivs(-1);">
+				<font style="font-size: 16px"><i class="fa fa-chevron-left fa-fw"></i> Zur&uuml;ck</font>
+			  </button>
+		    </div>
+		  </div>
+		  
+		  
+		  <div class="intro-slides">
+		    <p class="w3-border-bottom"><span class="w3-small">Auswahl > Pl&auml;tze w&auml;hlen > Kontaktdaten eingeben ></span> <strong> Men&uuml; ausw&auml;hlen</strong> <span class="w3-small">> Daten &uuml;berpr&uuml;fen</span></p>
+		
+		    <div style="font-size: 18px;">
+		      <h3>Men&uuml;auswahl:</h3>
+			  
+		      <form action="javascript:void(0);" method="POST" onsubmit="menuSelect()" id="form-menu-data">
+			    <div class="w3-row sso-padding-8">
+				  <div class="w3-third">
+				    <label for="my-name"><strong>Starter:</strong></label>
+				  </div>
+				  
+				  <div class="w3-twothird">
+				    <select class="w3-select w3-border w3-round" id="my-starter">
+					  <option value="0" selected>Starter auswählen</option>
+					  <option value="1">Kalte Pizza vom Vortag</option>
+					  <option value="2">Tomatensuppe</option>
+					  <option value="3">Aioli mit Baguette</option>
+					</select>
+				  </div>
+				</div>
+				
+				<div class="w3-row sso-padding-8">
+				  <div class="w3-third">
+				    <label for="my-first-name"><strong>Hauptgang:</strong></label>
+				  </div>
+				  
+				  <div class="w3-twothird">
+				    <select class="w3-select w3-border w3-round" id="my-main">
+					  <option value="0" selected>Hauptgang auswählen</option>
+					  <option value="1">Gr&uuml;nkohl Oldenburger Art</option>
+					  <option value="2">Nudeln mit R&uuml;hrei und Ketchup</option>
+					  <option value="3">Schnitzel mit Bratkartoffeln</option>
+					</select>
+				  </div>
+				</div>
+				
+			    <div class="w3-row sso-padding-8">
+				  <div class="w3-third">
+				    <label for="my-phone"><strong>Nachspeise:</strong></label>
+				  </div>
+				  
+				  <div class="w3-twothird">
+				    <select class="w3-select w3-border w3-round" id="my-dessert">
+					  <option value="0" selected>Nachspeise auswählen</option>
+					  <option value="1">Solero</option>
+					  <option value="2">Bum Bum Eis</option>
+					  <option value="3">Vanille Pudding</option>
+					</select>
+				  </div>
+				</div>
+			
+			    <p>				
+				  <button class="w3-button w3-border w3-round sso-submit-color w3-right" type="submit">
+				    <font style="font-size: 16px">Weiter <i class="fa fa-chevron-right fa-fw"></i></font>
+				  </button>
+			    </p>
+			  </form>
+			  
+			  <button class="w3-button w3-border w3-round sso-submit-color w3-left" onclick="plusDivs(-1);">
+				<font style="font-size: 16px"><i class="fa fa-chevron-left fa-fw"></i> Zur&uuml;ck</font>
+			  </button>
+		    </div>
+		  </div>
+		  
+		  
+		  <div class="intro-slides">
+		    <p class="w3-border-bottom"><span class="w3-small">Auswahl > Pl&auml;tze w&auml;hlen > Kontaktdaten eingeben > Men&uuml; ausw&auml;hlen ></span> <strong>Daten &uuml;berpr&uuml;fen</strong></p>
+		
+		    <div style="font-size: 18px;">
+		      <h3>Zusammenfassung:</h3>
+			  
+			  <div id="summary">
+			    <h5>Ihre Kontaktdaten:</h5>
+				<p><strong>Name:</strong> <span id="sel-vorname"></span> <span id="sel-nachname"></span><br>
+				<strong>Telefonnummer:</strong> <span id="sel-phone"></span><br>
+				<strong>E-Mail:</strong> <span id="sel-mail"></span></p>
+				
+			    <h5>Ihr Besuch in der Studentenbude:</h5>
+				<p><strong>Datum:</strong> <span id="sel-date"></span><br>
+				<strong>Uhrzeit:</strong> <span id="sel-time"></span><br>
+				<strong>Personen:</strong> <span id="sel-persons"></span></p>
+				<strong>Tisch:</strong> <span id="sel-table"></span></p>
+				
+			    <h5>Ihre Men&uuml;auswahl:</h5>
+				<p><strong>Starter:</strong> <span id="sel-starter"></span><br>
+				<strong>Hauptgang:</strong> <span id="sel-main"></span><br>
+				<strong>Dessert:</strong> <span id="sel-dessert"></span></p>
+			  </div>
+			  
+			  <button class="w3-button w3-border w3-round sso-submit-color w3-left" onclick="plusDivs(-1);">
+				<font style="font-size: 16px"><i class="fa fa-chevron-left fa-fw"></i> Zur&uuml;ck</font>
+			  </button>
+			  
+			  <button class="w3-button w3-border w3-round w3-green w3-right" onclick="alert('Vielen Dank für Ihre Reservierung. Sie erhalten in Kürze eine Bestätigung von uns.'); window.location.reload(true);">
+				<font style="font-size: 16px"><i class="fa fa-send-o fa-fw"></i> Absenden</font>
+			  </button>
+		    </div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	
+	
+	
+	
+	<div id="menu" class="w3-modal">
+	  <div class="w3-modal-content">
+	    <header class="w3-container sso-modal-header-color">
+		  <span onclick="document.getElementById('menu').style.display='none'" class="w3-button w3-display-topright">X</span>
+		  <h3>Unser Men&uuml;</h3>
+		</header>
+		
+	    <div class="w3-container sso-modal-body-color">
+          <h3 class="w3-border-bottom">Starter</h3>
+		  <div style="padding-bottom: 16px; font-size: 18px;">
+		    <p>Kalte Pizza vom Vortag | <b>4.50</b></p>
+		    <p>Tomatensuppe | <b>4.50</b></p>
+		    <p>Aioli mit Baguette | <b>4.50</b></p>
+		  </div>
+		  
+          <h3 class="w3-border-bottom">Hauptgang</h3>
+		  <div style="padding-bottom: 16px; font-size: 18px;">
+		    <p>Gr&uuml;nkohl Oldenburger Art | <b>14.50</b></p>
+		    <p>Nudeln mit R&uuml;hrei und Ketchup | <b>12.50</b></p>
+		    <p>Schnitzel mit Bratkartoffeln | <b>13.50</b></p>
+		  </div>
+		  
+          <h3 class="w3-border-bottom">Nachspeise</h3>
+		  <div style="padding-bottom: 16px; font-size: 18px;">
+		    <p>Solero | <b>3.50</b></p>
+		    <p>Bum Bum Eis | <b>3.50</b></p>
+		    <p>Vanille Pudding | <b>4.50</b></p>
+		  </div>
+		  
+		</div>
+	  </div>
+	</div>
+	
+	
+	<div id="contact" class="w3-modal">
+	  <div class="w3-modal-content">
+	    <header class="w3-container sso-modal-header-color">
+		  <span onclick="document.getElementById('contact').style.display='none'" class="w3-button w3-display-topright">X</span>
+		  <h3>Kontakt</h3>
+		</header>
+		
+	    <div class="w3-container">
+		    <div class="w3-row">
+			  <div class="w3-third w3-padding-16" align="left">
+			    <div class="w3-container">
+				  <h4>Kontakt:</h4>
+				  <p><i class='fa fa-map-marker fa-fw'></i> Mustergasse 77, 12345 City<br>
+				  <i class='fa fa-fw fa-phone'></i> xxxx-yyyyyyy<br>
+				  <i class='fa fa-fw fa-envelope'></i> mail@template.xcf</p>
+				</div>
+				
+				<div class="w3-container">
+				  <h4>&Ouml;ffnungszeiten:</h4>
+				  <p>Dienstag - Donnerstag | <strong>10 - 22</strong><br>
+				  Freitag u. Samstag | <strong>10 - 24</strong><br>
+				  Sonntag | <strong>8 - 16</strong><br>
+				  Montags <strong>Ruhetag</strong></p>
+				</div>
+			  </div>
+			  
+			  <div class="w3-twothird w3-padding-16" align="left" style="padding-left: 10px; padding-right: 10px;">
+			    <p align="center">Melden Sie sich bei uns &uuml;ber unser Kontaktformular!</p>
+			  
+			    <form method="POST">
+			      <p><input class="w3-input w3-border w3-round sso-input-width" type="text" placeholder="Name*" name="name" required></p>
+			      <p><input class="w3-input w3-border w3-round sso-input-width" type="email" placeholder="Email*" name="email" required></p>
+			      <p><input class="w3-input w3-border w3-round sso-input-width" type="tel" placeholder="Telefon- / Mobilnummer*" name="mobil" required></p>
+			      <p><textarea class="w3-input w3-border w3-round sso-input-width" type="textarea" placeholder="Nachricht*" name="msg" required></textarea></p>
+				  <p><input class="w3-check" type="checkbox" required> <label>Ich bin mit der <a>Datenschutzvereinbarung</a> einverstanden! *</label></p>
+			  
+			      <p style="font-size: 12px">* Diese Felder m&uuml;ssen ausgef&uuml;llt werden!</p>
+				
+			      <p>
+			        <button class="w3-button w3-border w3-round sso-submit-color w3-right" type="submit">
+			          <i class="fa fa-paper-plane" style="font-size: 16px"></i> <font style="font-size: 16px">ABSCHICKEN</font>
+			        </button>
+			      </p>
+			    </form>
+			  </div>
+			</div>
+		</div>
+	  </div>
+	</div>
+	
+	
+	<!-- javascript functions -->
+	<script src="js/sso-functions.js"></script>
+  
+  </body>
+</html>
