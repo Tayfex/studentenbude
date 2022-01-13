@@ -1,0 +1,41 @@
+/* import my fonts */
+@font-face {
+	font-family: LobsterTwoBold;
+	src: url(../fonts/LobsterTwo-Bold.ttf);
+}
+
+@font-face {
+	font-family: LobsterTwoItalic;
+	src: url(../fonts/LobsterTwo-Italic.ttf);
+}
+
+@font-face {
+	font-family: LobsterTwoRegular;
+	src: url(../fonts/Lato-Regular.ttf);
+}
+
+/* add fonts to html */
+h1, h2, .sso-font-family-black {
+	font-family: LobsterTwoBold;
+}
+	  
+h3, h4, h5 {
+	font-family: LobsterTwoBold;
+}
+
+body, p, li {
+	font-family: LobsterTwoRegular;
+}
+
+.sso-font-family-regular {
+	font-family: LobsterTwoRegular;
+}
+
+.sso-font-family-regular-italic {
+	font-family: LobsterTwoItalic;
+}
+
+.sso-navi-text {
+	font-size: 12px;
+	line-height: 0.5;
+}

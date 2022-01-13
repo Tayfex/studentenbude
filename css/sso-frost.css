@@ -1,0 +1,16 @@
+.sso-frost-background {
+	background-color: rgba(36, 39, 51, 0.2);
+	-webkit-backdrop-filter: blur(8px);
+	backdrop-filter: blur(8px);
+}
+
+.sso-frost-foreground {
+	color: #FFE9D9;
+}
+
+
+@media screen and (max-width: 600px) {
+	.sso-frost-background {
+		background-color: rgba(36, 39, 51, 0.35);
+	}
+}

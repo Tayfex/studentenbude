@@ -1,0 +1,212 @@
+/* Smooth Scrolling */
+html {
+	scroll-behavior: smooth;
+}
+
+body, html {
+	height: 100%;
+}
+
+a {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.sso-bg-image-start { 
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+					 
+.sso-bg-image-start {
+	background-image: url('../images/background.jpg');
+	min-height: 100%;
+	filter: grayscale(60%);
+}
+	  
+.sso-max-width {
+	max-width: 1200px;
+}
+
+.sso-input-width {
+	width: 98%;
+}
+
+.sso-label-style {
+	width: 50%;
+	float: left;
+	font-size: 22px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.sso-section-label-style {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 30px;
+	padding-right: 30px;
+	border-radius: 5px;
+}
+
+.sso-navi-style {
+	font-weight: bold;
+}
+
+.sso-bars-size, .sso-social-size {
+	font-size: 30px;
+}
+
+.sso-footer-style {
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.sso-reservieren-btn {
+	font-size: 28px;
+	bottom: 60px;
+	background-color: #ff0000;
+	color: #FFE9D9;
+}
+
+.sso-opening-container {
+	left: 12px;
+	bottom: 60px;
+	border-radius: 12px;
+}
+
+.sso-padding-8 {
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+/* Restaurant Grundriss */
+.sso-inside-style, .sso-outside-style, .sso-seat-free-style, .sso-seat-used-style {
+	width: 30px;
+	height: 30px;
+}
+
+.sso-seatmap-grid-main, .sso-seatmap-grid-main-outside {
+	display: grid;
+	grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+	grid-gap: 6px;
+	padding: 6px;
+}
+
+.sso-seatmap-grid-main, .sso-inside-style {
+	background-color: #e2e2e2;
+}
+
+.sso-seatmap-grid-main-outside, .sso-outside-style {
+	background-color: #c3c3c3;
+}
+
+.sso-seatmap-grid-main > div, .sso-seatmap-grid-main-outside > div {
+	text-align: center;
+	font-size: 16px;
+}
+
+.sso-seatmap-table, .sso-seatmap-bar {
+	cursor: pointer;
+}
+
+.sso-seat-free {
+	background-color: #24a319;
+	color: #FFE9D9;
+}
+
+.sso-seat-used {
+	background-color: #a02128;
+	color: #FFE9D9;
+}
+
+/* seating inside */
+#table-7-inside {
+	grid-area: 4 / 3 / span 1 / span 2;
+}
+
+#table-8-inside {
+	grid-area: 4 / 6 / span 1 / span 2;
+}
+
+#table-9-inside {
+	grid-area: 4 / 8 / span 1 / span 2;
+}
+
+#table-10-inside {
+	grid-area: 4 / 11 / span 1 / span 2;
+}
+
+#table-11-inside {
+	grid-area: 4 / 14 / span 1 / span 3;
+}
+
+#table-13-inside {
+	grid-area: 6 / 3 / span 1 / span 2;
+}
+
+#table-14-inside {
+	grid-area: 6 / 6 / span 1 / span 2;
+}
+
+#table-15-inside {
+	grid-area: 6 / 8 / span 1 / span 2;
+}
+
+#table-16-inside {
+	grid-area: 6 / 11 / span 1 / span 2;
+}
+
+#table-17-inside {
+	grid-area: 6 / 14 / span 1 / span 3;
+}
+
+#table-23-inside {
+	grid-area: 8 / 13 / span 1 / span 2;
+}
+
+
+
+/* seating outside */
+#table-3-outside {
+	grid-area: 2 / 6 / span 2 / span 1;
+}
+
+#table-4-outside {
+	grid-area: 2 / 8 / span 2 / span 1;
+}
+
+#table-6-outside {
+	grid-area: 2 / 14 / span 2 / span 1;
+}
+
+#table-9-outside {
+	grid-area: 4 / 6 / span 2 / span 1;
+}
+
+#table-10-outside {
+	grid-area: 4 / 8 / span 2 / span 1;
+}
+
+#table-12-outside {
+	grid-area: 4 / 14 / span 2 / span 1;
+}
+
+
+/* Logo */
+.sso-logo {
+	position: relative;
+	top: 70px;
+	width: 320px;
+}
+
+
+@media screen and (max-width: 600px) {
+	.sso-reservieren-btn {
+		font-size: 20px;
+	}
+	
+	.sso-logo {
+		width: 200px;
+	}
+}

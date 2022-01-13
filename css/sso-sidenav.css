@@ -1,0 +1,81 @@
+/* sidenavigation for mobile devices */
+.sso-sidenav-style {
+	z-index: 9;
+	display:none;
+	right:0;
+}
+
+/* create sticky sidenav in the middle of the height */
+.sso-sticky-sidenav-icon {
+	position: absolute;
+	right: 0;
+	top: 20%;
+	-webkit-transform: translateY(-20%);
+	-ms-transform: translateY(-20%);
+	transform: translateY(-20%);
+	background-color: rgba(255, 233, 217, 0.2);
+	-webkit-backdrop-filter: blur(8px);
+	backdrop-filter: blur(8px);
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+.sso-sticky-sidenav-icon #rese {
+	background-color: rgba(250, 0, 0, 0.2);
+}
+
+.sso-sticky-sidenav-icon div {
+	display: block;
+	text-align: center;
+	padding-left: 16px;
+	padding-right: 16px;
+	padding-top: 6px;
+	padding-bottom: 18px;
+	transition: all 0.3s ease;
+	color: #FFE9D9;
+}
+
+.sso-sticky-sidenav-icon a {
+	font-size: 40px;
+	text-decoration: none;
+}
+
+.sso-sticky-sidenav-icon p {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.sso-sticky-sidenav-icon div:hover {
+	background-color: rgba(255, 233, 217, 0.2);
+	-webkit-backdrop-filter: blur(8px);
+	backdrop-filter: blur(8px);
+	color: #242733;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+
+@media screen and (max-width: 900px) {
+	.sso-sticky-sidenav-icon {
+		background-color: rgba(36, 39, 51, 0.2);
+	}
+}
+
+
+@media screen and (max-width: 600px) {
+	
+	.sso-sticky-sidenav-icon a {
+		font-size: 20px;
+	}
+
+	.sso-sticky-sidenav-icon p {
+		font-size: 11px;
+	}
+	
+	.sso-sticky-sidenav-icon div {
+		padding-left: 12px;
+		padding-right: 12px;
+		padding-top: 2px;
+		padding-bottom: 14px;
+	}
+}

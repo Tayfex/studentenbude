@@ -1,0 +1,47 @@
+.sso-label-color {
+	background-color: #c1a590;
+	color: white;
+}
+
+.sso-container-color {
+	background-color: rgba(255, 255, 255, 0.9);
+	color: #c1a590;
+}
+
+.sso-navi-bg-color {
+	/*background-color: rgba(255, 255, 255, 0.75);*/
+	background-color: #242733;
+	color: #FFE9D9;
+}
+
+.sso-social-color {
+	color: #242733;
+}
+
+.sso-text-color {
+	color: #242733;
+}
+
+.sso-footer-color {
+	background-color: #242733;
+	color: #FFE9D9;
+}
+
+.sso-modal-header-color {
+	background-color: #242733;
+	color: #FFE9D9;
+}
+
+.sso-modal-body-color {
+  color: #000000;
+}
+
+.sso-submit-color {
+	background-color: #242733;
+	color: #FFE9D9;
+}
+
+.sso-section-label-color {
+	background-color: rgba(192, 165, 144, 0.75);
+	color: #FFFFFF;
+}
