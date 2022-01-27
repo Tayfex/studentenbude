@@ -2,6 +2,8 @@ var userDate, userTime, userPersons, userTable;
 
 // Slideshow
 var slideIndex = 1;
+var oldTableIndex = 0;
+var oldTable, oldColor;
 showDivs(slideIndex);
 
 function sidebar_open() {
@@ -23,9 +25,9 @@ function showDivs(n) {
 	if (n > x.length) {slideIndex = 1}
 	if (n < 1) {slideIndex = x.length}
 	for (i = 0; i < x.length; i++) {
-	  x[i].style.display = "none";  
+	  x[i].style.display = "none";
 	}
-	x[slideIndex-1].style.display = "block";  
+	x[slideIndex-1].style.display = "block";
 }
 
 
@@ -35,24 +37,24 @@ function validateForm1() {
 	// validate current date and time
 	var today = new Date();
 	var month, day, year, hours, minutes, today_date, today_time;
-	
+
 	month = '' + (today.getMonth()+1);
 	day = '' + today.getDate();
 	year = today.getFullYear();
-	
+
 	if (month.length < 2) {
 		month = '0' + month;
 	}
 	if (day.length < 2) {
 		day = '0' + day;
 	}
-	
+
 	today_date = [year, month, day].join('-');
-	
+
 	//var today_time = today.getHours() + ':' + today.getMinutes();
 	minutes = today.getMinutes();
 	hours = today.getHours();
-	
+
 	if (minutes.length < 2) {
 		minutes = '0' + minutes;
 	}
@@ -60,24 +62,24 @@ function validateForm1() {
 		hours = '0' + hours;
 	}
 	today_time = [hours, minutes].join(':');
-	
+
 	// add data to summary table
-	
+
 	// check if date and time isnt in the past
 	userDate = document.getElementById('my-date').value;
 	userTime = document.getElementById('my-time').value;
 	userPersons = document.getElementById('my-persons').value;
-	
+
 	if (userDate.localeCompare(today_date) == -1) {
 		alert('Das Datum liegt in der Vergangenheit! Bitte wählen Sie ein zukünftiges Datum aus.');
 		return;
 	}
-	
+
 	/*if (userTime.localeCompare(today_time) == -1) {
 		alert('Die Uhrzeit liegt in der Vergangenheit! Bitte wählen Sie eine zukünftige Zeit aus.');
 		return;
 	}*/
-	
+
 	plusDivs(1);
 }
 
@@ -90,8 +92,19 @@ function removeTable() {
 
 
 
-function selectTable(tableNb) {
-	userTable = tableNb;
+function selectTable(object) {
+
+    if(oldTableIndex){
+    oldTable.style.background = oldColor;
+    oldTable.style.color = "#fff";
+    }
+
+	userTable = object.id;
+	oldColor = object.style.background;
+	object.style.background  = "#e0e100";
+	object.style.color = "#000";
+	oldTableIndex = 1;
+	oldTable = object;
 	document.getElementById('current-table').innerHTML = userTable;
 }
 

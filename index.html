@@ -184,216 +184,217 @@
 				  <div class="w3-half">
 				    <p><div class="sso-seat-free-style sso-seat-free"></div> Frei</p>
 				    <p><div class="sso-seat-used-style sso-seat-used"></div> Belegt</p>
+					  <p><div class="sso-seat-chosen-style sso-seat-chosen"></div> Auswahl</p>
 				  </div>
 				</div>
-				
+
 			  <p>Ihr ausgew&auml;hlter Tisch: <strong><span id="current-table"></span></strong></p>
-			  
+
 			  <div class="w3-padding-16">
 			    <!-- seat map based on grids -->
 				<div class="sso-seatmap-grid-main">
 					<!-- row 1 -->
 					<div>&nbsp;</div>
-					<div class="sso-seatmap-table sso-seat-free" id="table-1-inside" onclick="selectTable(this.id)">2</div>
-					<div class="sso-seatmap-table sso-seat-free" id="table-2-inside" onclick="selectTable(this.id)">2</div>  
-					<div class="sso-seatmap-table sso-seat-free" id="table-3-inside" onclick="selectTable(this.id)">2</div>
-					<div class="sso-seatmap-table sso-seat-free" id="table-4-inside" onclick="selectTable(this.id)">2</div>
-					<div>&nbsp;</div>  
+					<div class="sso-seatmap-table sso-seat-free" id="table-1-inside" onclick="selectTable(this)">2</div>
+					<div class="sso-seatmap-table sso-seat-free" id="table-2-inside" onclick="selectTable(this)">2</div>
+					<div class="sso-seatmap-table sso-seat-free" id="table-3-inside" onclick="selectTable(this)">2</div>
+					<div class="sso-seatmap-table sso-seat-free" id="table-4-inside" onclick="selectTable(this)">2</div>
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
-					<div>&nbsp;</div>  
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
-					<div class="sso-seatmap-bar sso-seat-free" id="table-7-bar" onclick="selectTable(this.id)">1</div>  
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
-					
+					<div class="sso-seatmap-bar sso-seat-free" id="table-7-bar" onclick="selectTable(this)">1</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+
 					<!-- row 2 -->
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
-					<div>&nbsp;</div>  
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
-					<div>&nbsp;</div>  
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
-					<div class="sso-seatmap-bar sso-seat-free" id="table-1-bar" onclick="selectTable(this.id)">1</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div class="sso-seatmap-bar sso-seat-free" id="table-1-bar" onclick="selectTable(this)">1</div>
 					<div class="sso-seatmap-bar sso-seat-used" id="table-2-bar" onclick="alert('Dieser Tisch ist bereits belegt!')">1</div>
-					<div class="sso-seatmap-bar sso-seat-free" id="table-3-bar" onclick="selectTable(this.id)">1</div>  
-					<div class="sso-seatmap-bar sso-seat-free" id="table-4-bar" onclick="selectTable(this.id)">1</div>
+					<div class="sso-seatmap-bar sso-seat-free" id="table-3-bar" onclick="selectTable(this)">1</div>
+					<div class="sso-seatmap-bar sso-seat-free" id="table-4-bar" onclick="selectTable(this)">1</div>
 					<div class="sso-seatmap-bar sso-seat-used" id="table-5-bar" onclick="alert('Dieser Tisch ist bereits belegt!')">1</div>
-					<div class="sso-seatmap-bar sso-seat-free" id="table-6-bar" onclick="selectTable(this.id)">1</div>  
+					<div class="sso-seatmap-bar sso-seat-free" id="table-6-bar" onclick="selectTable(this)">1</div>
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
-					
+
 					<!-- row 3 -->
-					<div class="sso-seatmap-table sso-seat-free" id="table-5-inside" onclick="selectTable(this.id)">2</div>
-					<div>&nbsp;</div>
-					<div>&nbsp;</div>  
-					<div>&nbsp;</div>
-					<div>&nbsp;</div>
-					<div>&nbsp;</div>  
+					<div class="sso-seatmap-table sso-seat-free" id="table-5-inside" onclick="selectTable(this)">2</div>
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
-					<div>&nbsp;</div>  
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
-					<div>&nbsp;</div>  
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
-					
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+
 					<!-- row 4 -->
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
-					<div class="sso-seatmap-table sso-seat-free" id="table-7-inside" onclick="selectTable(this.id)">4</div>  
+					<div class="sso-seatmap-table sso-seat-free" id="table-7-inside" onclick="selectTable(this)">4</div>
 					<div>&nbsp;</div>
-					<div class="sso-seatmap-table sso-seat-free" id="table-8-inside" onclick="selectTable(this.id)">4</div>
-					<div class="sso-seatmap-table sso-seat-free" id="table-9-inside" onclick="selectTable(this.id)">4</div>  
+					<div class="sso-seatmap-table sso-seat-free" id="table-8-inside" onclick="selectTable(this)">4</div>
+					<div class="sso-seatmap-table sso-seat-free" id="table-9-inside" onclick="selectTable(this)">4</div>
 					<div>&nbsp;</div>
-					<div class="sso-seatmap-table sso-seat-free" id="table-10-inside" onclick="selectTable(this.id)">4</div>
+					<div class="sso-seatmap-table sso-seat-free" id="table-10-inside" onclick="selectTable(this)">4</div>
 					<div>&nbsp;</div>
-					<div class="sso-seatmap-table sso-seat-free" id="table-11-inside" onclick="selectTable(this.id)">6</div>
-					
+					<div class="sso-seatmap-table sso-seat-free" id="table-11-inside" onclick="selectTable(this)">6</div>
+
 					<!-- row 5 --->
 					<div class="sso-seatmap-table sso-seat-used" id="table-6-inside" onclick="alert('Dieser Tisch ist bereits belegt!')">2</div>
 					<div>&nbsp;</div>
-					<div>&nbsp;</div>  
-					<div>&nbsp;</div>
-					<div>&nbsp;</div>
-					<div>&nbsp;</div>  
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
-					<div>&nbsp;</div>  
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
-					<div>&nbsp;</div>  
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
-					
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+
 					<!-- row 6 -->
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
-					<div class="sso-seatmap-table sso-seat-used" id="table-13-inside" onclick="alert('Dieser Tisch ist bereits belegt!')">4</div>  
+					<div class="sso-seatmap-table sso-seat-used" id="table-13-inside" onclick="alert('Dieser Tisch ist bereits belegt!')">4</div>
 					<div>&nbsp;</div>
 					<div class="sso-seatmap-table sso-seat-used" id="table-14-inside" onclick="alert('Dieser Tisch ist bereits belegt!')">4</div>
-					<div class="sso-seatmap-table sso-seat-used" id="table-15-inside" onclick="alert('Dieser Tisch ist bereits belegt!')">4</div>  
+					<div class="sso-seatmap-table sso-seat-used" id="table-15-inside" onclick="alert('Dieser Tisch ist bereits belegt!')">4</div>
 					<div>&nbsp;</div>
-					<div class="sso-seatmap-table sso-seat-free" id="table-16-inside" onclick="selectTable(this.id)">4</div>
+					<div class="sso-seatmap-table sso-seat-free" id="table-16-inside" onclick="selectTable(this)">4</div>
 					<div>&nbsp;</div>
 					<div class="sso-seatmap-table sso-seat-used" id="table-17-inside" onclick="alert('Dieser Tisch ist bereits belegt!')">6</div>
-					
+
 					<!-- row 7 -->
-					<div class="sso-seatmap-table sso-seat-free" id="table-12-inside" onclick="selectTable(this.id)">2</div>
-					<div>&nbsp;</div>
-					<div>&nbsp;</div>  
-					<div>&nbsp;</div>
-					<div>&nbsp;</div>
-					<div>&nbsp;</div>  
+					<div class="sso-seatmap-table sso-seat-free" id="table-12-inside" onclick="selectTable(this)">2</div>
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
-					<div>&nbsp;</div>  
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
-					<div>&nbsp;</div>  
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
-					
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+
 					<!-- row 8 -->
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
-					<div class="sso-seatmap-table sso-seat-free" id="table-18-inside" onclick="selectTable(this.id)">2</div>  
+					<div class="sso-seatmap-table sso-seat-free" id="table-18-inside" onclick="selectTable(this)">2</div>
 					<div>&nbsp;</div>
 					<div class="sso-seatmap-table sso-seat-used" id="table-19-inside" onclick="alert('Dieser Tisch ist bereits belegt!')">2</div>
-					<div>&nbsp;</div>  
-					<div class="sso-seatmap-table sso-seat-free" id="table-20-inside" onclick="selectTable(this.id)">2</div>
 					<div>&nbsp;</div>
-					<div class="sso-seatmap-table sso-seat-free" id="table-21-inside" onclick="selectTable(this.id)">2</div>
+					<div class="sso-seatmap-table sso-seat-free" id="table-20-inside" onclick="selectTable(this)">2</div>
 					<div>&nbsp;</div>
-					<div class="sso-seatmap-table sso-seat-used" id="table-22-inside" onclick="alert('Dieser Tisch ist bereits belegt!')">2</div>  
+					<div class="sso-seatmap-table sso-seat-free" id="table-21-inside" onclick="selectTable(this)">2</div>
+					<div>&nbsp;</div>
+					<div class="sso-seatmap-table sso-seat-used" id="table-22-inside" onclick="alert('Dieser Tisch ist bereits belegt!')">2</div>
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
-					<div class="sso-seatmap-table sso-seat-used" id="table-23-inside" onclick="alert('Dieser Tisch ist bereits belegt!')">4</div>  
+					<div class="sso-seatmap-table sso-seat-used" id="table-23-inside" onclick="alert('Dieser Tisch ist bereits belegt!')">4</div>
 					<div>&nbsp;</div>
 				  </div>
-					
+
 				  <!-- outside -->
 				  <div class="sso-seatmap-grid-main-outside">
 					<!-- row 1 -->
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
-					<div>&nbsp;</div>  
-					<div>&nbsp;</div>
-					<div>&nbsp;</div>
-					<div>&nbsp;</div>  
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
-					<div>&nbsp;</div>  
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
-					<div>&nbsp;</div>  
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
-					
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+
 					<!-- row 2 -->
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
-					<div>&nbsp;</div>  
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
-					<div class="sso-seatmap-table sso-seat-free" id="table-3-outside" onclick="selectTable(this.id)">4</div>  
 					<div>&nbsp;</div>
-					<div class="sso-seatmap-table sso-seat-free" id="table-4-outside" onclick="selectTable(this.id)">4</div>
+					<div class="sso-seatmap-table sso-seat-free" id="table-3-outside" onclick="selectTable(this)">4</div>
 					<div>&nbsp;</div>
-					<div>&nbsp;</div>
-					<div>&nbsp;</div>  
+					<div class="sso-seatmap-table sso-seat-free" id="table-4-outside" onclick="selectTable(this)">4</div>
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
-					<div class="sso-seatmap-table sso-seat-used" id="table-6-outside" onclick="alert('Dieser Tisch ist bereits belegt!')">4</div>  
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
-					
+					<div>&nbsp;</div>
+					<div class="sso-seatmap-table sso-seat-used" id="table-6-outside" onclick="alert('Dieser Tisch ist bereits belegt!')">4</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+
 					<!-- row 3 -->
-					<div class="sso-seatmap-table sso-seat-free" id="table-1-outside" onclick="selectTable(this.id)">2</div>
+					<div class="sso-seatmap-table sso-seat-free" id="table-1-outside" onclick="selectTable(this)">2</div>
 					<div>&nbsp;</div>
-					<div>&nbsp;</div>  
+					<div>&nbsp;</div>
 					<div class="sso-seatmap-table sso-seat-used" id="table-2-outside" onclick="alert('Dieser Tisch ist bereits belegt!')">2</div>
 					<div>&nbsp;</div>
-					<div>&nbsp;</div>  
-					<div>&nbsp;</div>
-					<div class="sso-seatmap-table sso-seat-free" id="table-5-outside" onclick="selectTable(this.id)">2</div>
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
-					<div>&nbsp;</div>  
+					<div class="sso-seatmap-table sso-seat-free" id="table-5-outside" onclick="selectTable(this)">2</div>
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
-					
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+
 					<!-- row 4 -->
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
-					<div>&nbsp;</div>  
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
-					<div class="sso-seatmap-table sso-seat-free" id="table-9-outside" onclick="selectTable(this.id)">4</div>  
+					<div>&nbsp;</div>
+					<div class="sso-seatmap-table sso-seat-free" id="table-9-outside" onclick="selectTable(this)">4</div>
 					<div>&nbsp;</div>
 					<div class="sso-seatmap-table sso-seat-used" id="table-10-outside" onclick="alert('Dieser Tisch ist bereits belegt!')">4</div>
 					<div>&nbsp;</div>
 					<div>&nbsp;</div>
-					<div>&nbsp;</div>  
 					<div>&nbsp;</div>
-					<div class="sso-seatmap-table sso-seat-free" id="table-12-outside" onclick="selectTable(this.id)">4</div>
+					<div>&nbsp;</div>
+					<div class="sso-seatmap-table sso-seat-free" id="table-12-outside" onclick="selectTable(this)">4</div>
 					
 					<!-- row 5 -->
 					<div class="sso-seatmap-table sso-seat-used" id="table-7-outside" onclick="alert('Dieser Tisch ist bereits belegt!')">2</div>

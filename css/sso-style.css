@@ -81,7 +81,7 @@ a {
 }
 
 /* Restaurant Grundriss */
-.sso-inside-style, .sso-outside-style, .sso-seat-free-style, .sso-seat-used-style {
+.sso-inside-style, .sso-outside-style, .sso-seat-free-style, .sso-seat-used-style, .sso-seat-chosen-style {
 	width: 30px;
 	height: 30px;
 }
@@ -117,6 +117,11 @@ a {
 
 .sso-seat-used {
 	background-color: #a02128;
+	color: #FFE9D9;
+}
+
+.sso-seat-chosen {
+	background-color: #e0e100;
 	color: #FFE9D9;
 }
 
