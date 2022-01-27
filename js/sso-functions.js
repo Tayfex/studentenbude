@@ -94,18 +94,27 @@ function removeTable() {
 
 function selectTable(object) {
 
-    if(oldTableIndex){
-    oldTable.style.background = oldColor;
-    oldTable.style.color = "#fff";
-    }
+	var tableSize = document.getElementById(object.id).innerHTML;
+	console.log("Tisch ausgewaehlt:")
+	console.log(tableSize)
+	
+	if(tableSize < userPersons) {
+		alert("Dieser Tisch ist zu klein für " + userPersons + " Personen");
+	}
+	else {
+		if(oldTableIndex){
+			oldTable.style.background = oldColor;
+			oldTable.style.color = "#fff";
+		}
 
-	userTable = object.id;
-	oldColor = object.style.background;
-	object.style.background  = "#e0e100";
-	object.style.color = "#000";
-	oldTableIndex = 1;
-	oldTable = object;
-	document.getElementById('current-table').innerHTML = userTable;
+		userTable = object.id;
+		oldColor = object.style.background;
+		object.style.background  = "#e0e100";
+		object.style.color = "#000";
+		oldTableIndex = 1;
+		oldTable = object;
+		document.getElementById('current-table').innerHTML = userTable;
+	}
 }
 
 
